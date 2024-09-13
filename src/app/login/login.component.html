@@ -1,0 +1,24 @@
+<div class="login-container">
+  <mat-card class="login-card">
+      <!-- Adicione a imagem aqui
+      <img src="assets/img/login-logo.png" alt="Logo" class="login-logo">
+ -->
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <h2>Acessar o sistema</h2>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="password" name="password" type="password" required>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="full-width">Login</button>
+
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </form>
+  </mat-card>
+</div>

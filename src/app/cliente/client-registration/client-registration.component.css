@@ -1,0 +1,16 @@
+.client-registration-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.client-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
