@@ -1,15 +1,25 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened class="sidenav">
+  <!-- Sidenav -->
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav" [fixedInViewport]="true">
     <mat-nav-list>
-      <mat-list-item routerLink="/dashboard">Dashboard</mat-list-item>
-      <mat-list-item routerLink="/client-registration">Cadastro de Clientes</mat-list-item>
+      <a mat-list-item routerLink="/cadastro-cliente">Cadastro de Cliente</a>
+      <a mat-list-item routerLink="/editar-cliente">Editar Cliente</a>
+      <a mat-list-item routerLink="/excluir-cliente">Excluir Cliente</a>
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content class="sidenav-content">
+  <!-- Conteúdo Principal -->
+  <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <span>Móveis Planejados Dcor7</span>
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Sistema Dcor7</span>
     </mat-toolbar>
-    <router-outlet></router-outlet>
+
+    <!-- Área para o conteúdo do seu dashboard -->
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

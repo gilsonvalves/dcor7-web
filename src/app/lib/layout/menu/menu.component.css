@@ -18,3 +18,17 @@ mat-toolbar {
   z-index: 1;
   background-color: #6F9F87; /* Verde mais escuro */
 }
+
+.sidenav-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.main-content {
+  padding: 16px;
+}

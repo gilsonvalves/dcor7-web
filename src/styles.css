@@ -1,9 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: #F2EBE9; }
 /*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
 ::ng-deep .mat-primary {
   background-color: #6F9F87 !important; /* Verde mais escuro */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #F2EBE9;
+}
+
+mat-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+mat-sidenav-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+router-outlet {
+  flex: 1;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 

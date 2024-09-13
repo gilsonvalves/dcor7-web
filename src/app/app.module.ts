@@ -10,6 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table'; // Tabelas do Angular Material
+import { MatIconModule } from '@angular/material/icon'; // Ícones do Angular Material
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +19,9 @@ import { DashboardComponent } from './lib/layout/dashboard/dashboard.component';
 import { MenuComponent } from './lib/layout/menu/menu.component';
 import { ClientRegistrationComponent } from './cliente/client-registration/client-registration.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ClientListComponent } from './cliente/client-list/client-list.component';
+import { FooterComponent } from './lib/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     DashboardComponent,
     MenuComponent,
-    ClientRegistrationComponent
+    ClientRegistrationComponent,
+    ClientListComponent,
+    FooterComponent // Componente da lista de clientes
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    MatTableModule,
+    MatIconModule,
     AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
